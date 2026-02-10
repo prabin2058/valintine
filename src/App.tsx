@@ -48,66 +48,18 @@ const WEEK: DayItem[] = [
     imageFit: "contain",
   },
   {
+    title: "Kiss Day",
+    emoji: "💋",
+    subtitle: "A moment sealed with love.",
+    imageSrc: "/kiss.webp",
+  },
+  {
     title: "Valentine's Day",
     emoji: "❤️",
     subtitle: "The day for us.",
     imageSrc: "/valentine.webp",
   },
 ];
-
-function Timeline({ visibleCount }: { visibleCount: number }) {
-  return (
-    <div className="w-full max-w-2xl bg-gradient-to-br from-rose-50 via-pink-50 to-white rounded-3xl border border-white/60 px-5 py-6 shadow-sm">
-      <div className="flex items-center justify-between gap-3">
-        <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-neutral-900">
-          Valentine Week By PRABIN KARKI
-        </h2>
-        <div className="text-sm text-neutral-600">
-          {Math.min(visibleCount, WEEK.length)}/{WEEK.length}
-        </div>
-      </div>
-
-      <div className="mt-5 space-y-3">
-        {WEEK.map((item, idx) => {
-          const isVisible = idx < visibleCount;
-          const isLastVisible = idx === visibleCount - 1;
-
-          return (
-            <div
-              key={item.title}
-              className={
-                "rounded-2xl border bg-white/70 backdrop-blur px-4 py-4 shadow-sm transition-all " +
-                (isVisible
-                  ? "opacity-100 translate-y-0 " +
-                  (isLastVisible ? "animate-fadeUp" : "")
-                  : "opacity-0 -translate-y-1 pointer-events-none h-0 overflow-hidden border-transparent p-0")
-              }
-            >
-              <div className="flex items-start gap-3">
-                <div className="shrink-0 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 text-white text-xl">
-                  {item.emoji}
-                </div>
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2">
-                    <div className="font-semibold text-neutral-900">
-                      {item.title}
-                    </div>
-                    <div className="text-xs rounded-full bg-rose-50 text-rose-700 px-2 py-0.5 border border-rose-100">
-                      Day {idx + 1}
-                    </div>
-                  </div>
-                  <div className="mt-1 text-sm text-neutral-600">
-                    {item.subtitle}
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 function DayCard({ item, dayNumber }: { item: DayItem; dayNumber: number }) {
   const fitClass =
@@ -200,8 +152,8 @@ function App() {
                   }
                 }}
                 className={`rounded-2xl px-4 py-3 font-semibold transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 ${noClicks < 4
-                    ? "text-neutral-800 bg-white border border-neutral-200 hover:bg-neutral-50 active:bg-neutral-100 focus:ring-neutral-300"
-                    : "text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:brightness-105 active:brightness-95 focus:ring-rose-400/70"
+                  ? "text-neutral-800 bg-white border border-neutral-200 hover:bg-neutral-50 active:bg-neutral-100 focus:ring-neutral-300"
+                  : "text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:brightness-105 active:brightness-95 focus:ring-rose-400/70"
                   }`}
               >
                 {noClicks < 4 ? "No" : "Yes"}
