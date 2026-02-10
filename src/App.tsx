@@ -215,11 +215,11 @@ function App() {
                   ) : (
                     <div className="rounded-3xl border bg-white/70 backdrop-blur px-5 py-6 shadow-sm animate-fadeUp">
                       <div className="text-xl font-semibold text-neutral-900">
-                        Completed ❤️ Sangita Kunwar
+                        Completed ❤️ 
                       </div>
                       <div className="mt-2 text-sm text-neutral-600">
                         Thanks for going through Valentine Week with me.
-                        <span className="block mt-1">BY PRABIN KARKI</span>
+                        {/* <span className="block mt-1">BY PRABIN KARKI</span> */}
                       </div>
                     </div>
                   )}
