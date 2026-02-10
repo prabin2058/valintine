@@ -215,7 +215,7 @@ function App() {
                   ) : (
                     <div className="rounded-3xl border bg-white/70 backdrop-blur px-5 py-6 shadow-sm animate-fadeUp">
                       <div className="text-xl font-semibold text-neutral-900">
-                        Completed ❤️ 
+                        Completed ❤️ Sangita Kunwar
                       </div>
                       <div className="mt-2 text-sm text-neutral-600">
                         Thanks for going through Valentine Week with me.
